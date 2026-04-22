@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Get channels and messages",
+      "method": "GET",
+      "path": "/?channel=%D0%BE%D0%B1%D1%89%D0%B8%D0%B9",
+      "expectedStatus": 200,
+      "bodyMatcher": "partial",
+      "expectedBody": {"channels": [], "messages": []}
+    }
+  ]
+}

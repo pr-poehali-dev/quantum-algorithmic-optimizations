@@ -1,0 +1,22 @@
+{
+  "tests": [
+    {
+      "name": "Register user",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "register", "username": "testuser123", "password": "password123"},
+      "expectedStatus": 200,
+      "bodyMatcher": "partial",
+      "expectedBody": {"session_id": "string"}
+    },
+    {
+      "name": "Login user",
+      "method": "POST",
+      "path": "/",
+      "body": {"action": "login", "username": "testuser123", "password": "password123"},
+      "expectedStatus": 200,
+      "bodyMatcher": "partial",
+      "expectedBody": {"session_id": "string"}
+    }
+  ]
+}
